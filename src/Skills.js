@@ -26,7 +26,7 @@ const Skills = () => {
             <li><img src={flutterLogo} alt="Flutter Logo" className="skill-logo inline mr-2" />Flutter</li>
             <li><img src={cssLogo} alt="CSS Logo" className="skill-logo inline mr-2" />CSS</li>
             <li><img src={tailwindLogo} alt="TailwindCSS Logo" className="skill-logo inline mr-2" />TailwindCSS</li>
-            <li><img src={reactjsLogo} alt="ReactJS Logo" classname="skill-logo inline mr-2" />ReactJS</li>
+            <li><img src={reactjsLogo} alt="ReactJS Logo" className="skill-logo inline mr-2" />ReactJS</li>
           </ul>
         </div>
         <div className="skill-card">
