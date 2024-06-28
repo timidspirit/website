@@ -70,7 +70,7 @@ const App = () => {
           <a href="#photos" className="text-white hover:text-gray-400">Photos</a>
           <a href="#contact" className="text-white hover:text-gray-400">Contact</a>
         </nav>
-        <a href="#" className="ml-4 login-button">Login</a>
+<button className="ml-4 login-button" type="button">Login</button>
       </header>
 
       <div className="container mx-auto p-4">
