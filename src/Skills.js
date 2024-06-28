@@ -11,6 +11,8 @@ import githubLogo from './images/github-logo.png';
 import dockerLogo from './images/docker-logo.png';
 import vscodeLogo from './images/vscode-logo.png';
 import postmanLogo from './images/postman-logo.png';
+import nodejsLogo from './images/nodejs-logo.png';
+import reactjsLogo from './images/reactjs-logo.png';
 
 const Skills = () => {
   return (
@@ -24,6 +26,7 @@ const Skills = () => {
             <li><img src={flutterLogo} alt="Flutter Logo" className="skill-logo inline mr-2" />Flutter</li>
             <li><img src={cssLogo} alt="CSS Logo" className="skill-logo inline mr-2" />CSS</li>
             <li><img src={tailwindLogo} alt="TailwindCSS Logo" className="skill-logo inline mr-2" />TailwindCSS</li>
+            <li><img src={reactjsLogo} alt="ReactJS Logo" classname="skill-logo inline mr-2" />ReactJS</li>
           </ul>
         </div>
         <div className="skill-card">
@@ -33,6 +36,7 @@ const Skills = () => {
             <li><img src={dartLogo} alt="Dart Logo" className="skill-logo inline mr-2" />Dart</li>
             <li><img src={mysqlLogo} alt="MySQL Logo" className="skill-logo inline mr-2" />MySQL</li>
             <li><img src={postgresLogo} alt="PostgreSQL Logo" className="skill-logo inline mr-2" />PostgreSQL</li>
+            <li><img src={nodejsLogo} alt="NodeJS Logo" className="skill-logo inline mr-2" />NodeJS</li>
           </ul>
         </div>
         <div className="skill-card">

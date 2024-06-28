@@ -13,12 +13,14 @@ header {
   background-color: #1f1f38;
   padding: 1rem;
   z-index: 1; /* Ensure header is above ripple */
+  font-family: inherit; /* Inherit font family from body */
 }
 
 nav a {
   color: white;
   margin: 0 1rem;
   transition: color 0.3s;
+  font-family: inherit; /* Inherit font family from body */
 }
 
 nav a:hover {
@@ -35,6 +37,7 @@ nav a:hover {
   border-radius: 5px;
   text-decoration: none;
   transition: background 0.3s;
+  font-family: inherit; /* Inherit font family from body */
 }
 
 .login-button:hover {
@@ -62,6 +65,7 @@ section {
 h1, h2 {
   margin-bottom: 1rem;
   text-align: center;
+  font-family: inherit; /* Inherit font family from body */
 }
 
 h1 {
@@ -126,6 +130,7 @@ footer {
   position: absolute;
   color: white;
   z-index: 2; /* Ensure modal is above ripple */
+  font-family: inherit; /* Inherit font family from body */
 }
 
 .overlay {
@@ -146,6 +151,7 @@ footer {
   border-radius: 4px;
   background-color: #444;
   color: white;
+  font-family: inherit; /* Inherit font family from body */
 }
 
 .modal button {
@@ -158,6 +164,7 @@ footer {
   border-radius: 5px;
   text-decoration: none;
   transition: background 0.3s;
+  font-family: inherit; /* Inherit font family from body */
 }
 
 .modal button:hover {

@@ -81,7 +81,7 @@ const App = () => {
           <h1 className="text-4xl my-4">Hi, I am Ryan Koechel Jr.</h1>
           <h2 className="text-2xl mb-4">
             I am a <Typed
-              strings={['Full Stack Developer', 'UI/UX Designer', 'Software Engineer']}
+              strings={['Full Stack Developer?', 'System Administrator?', 'Software Engineer?']}
               typeSpeed={40}
               backSpeed={50}
               loop
