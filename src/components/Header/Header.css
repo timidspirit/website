@@ -1,0 +1,28 @@
+header {
+    background-color: #1f1f38;
+    padding: 1rem;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 1rem;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #f14e95;
+  }
+  
+  .login-button {
+    background: linear-gradient(315deg, hsla(279, 88%, 67%, 1) 0%, hsla(0, 71%, 57%, 1) 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .login-button:hover {
+    background: linear-gradient(135deg, hsla(0, 71%, 57%, 1) 0%, hsla(279, 88%, 67%, 1) 100%);
+  }
+  

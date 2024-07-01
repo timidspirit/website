@@ -1,0 +1,14 @@
+.octagon {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 50px auto;
+    clip-path: polygon(30% 3%, 70% 3%, 97% 30%, 97% 70%, 70% 97%, 30% 97%, 3% 70%, 3% 30%);
+  }
+  
+  .octagon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
