@@ -25,6 +25,14 @@
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 5px;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .skill-logo {

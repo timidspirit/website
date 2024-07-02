@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import htmlLogo from '../../images/html-logo.png';
 import flutterLogo from '../../images/flutter-logo.png';
 import cssLogo from '../../images/css-logo.png';
@@ -13,81 +13,89 @@ import vscodeLogo from '../../images/vscode-logo.png';
 import postmanLogo from '../../images/postman-logo.png';
 import nodejsLogo from '../../images/nodejs-logo.png';
 import reactjsLogo from '../../images/reactjs-logo.png';
+import SkillPopup from '../SkillPopup/SkillPopup';
 import './Skills.css';
 
-const Skills = () => (
-  <section id="skills" className="my-8">
-    <h2 className="text-3xl text-center mb-4">Skills</h2>
-    <div className="skills-container">
-      <div className="skills-group">
-        <h3 className="skills-group-title">Frontend</h3>
-        <div className="skill-card">
-          <img src={htmlLogo} alt="HTML" className="skill-logo" />
-          <p>HTML</p>
-        </div>
-        <div className="skill-card">
-          <img src={flutterLogo} alt="Flutter" className="skill-logo" />
-          <p>Flutter</p>
-        </div>
-        <div className="skill-card">
-          <img src={cssLogo} alt="CSS" className="skill-logo" />
-          <p>CSS</p>
-        </div>
-        <div className="skill-card">
-          <img src={tailwindLogo} alt="Tailwind" className="skill-logo" />
-          <p>Tailwind</p>
-        </div>
-        <div className="skill-card">
-          <img src={reactjsLogo} alt="React.js" className="skill-logo" />
-          <p>React.js</p>
-        </div>
-      </div>
+const skillsData = [
+  { name: 'HTML', logo: htmlLogo, description: 'Markup language for the web' },
+  { name: 'Flutter', logo: flutterLogo, description: 'UI toolkit for building natively compiled applications' },
+  { name: 'CSS', logo: cssLogo, description: 'Style sheet language used for describing the presentation of a document' },
+  { name: 'Tailwind', logo: tailwindLogo, description: 'Utility-first CSS framework' },
+  { name: 'Python', logo: pythonLogo, description: 'High-level programming language' },
+  { name: 'Dart', logo: dartLogo, description: 'Programming language optimized for building mobile apps' },
+  { name: 'MySQL', logo: mysqlLogo, description: 'Open-source relational database management system' },
+  { name: 'PostgreSQL', logo: postgresLogo, description: 'Open-source relational database' },
+  { name: 'GitHub', logo: githubLogo, description: 'Platform for version control and collaboration' },
+  { name: 'Docker', logo: dockerLogo, description: 'Platform for developing, shipping, and running applications' },
+  { name: 'VSCode', logo: vscodeLogo, description: 'Source-code editor made by Microsoft' },
+  { name: 'Postman', logo: postmanLogo, description: 'API development environment' },
+  { name: 'Node.js', logo: nodejsLogo, description: 'JavaScript runtime built on Chrome\'s V8 engine' },
+  { name: 'React.js', logo: reactjsLogo, description: 'JavaScript library for building user interfaces' },
+];
 
-      <div className="skills-group">
-        <h3 className="skills-group-title">Backend</h3>
-        <div className="skill-card">
-          <img src={pythonLogo} alt="Python" className="skill-logo" />
-          <p>Python</p>
-        </div>
-        <div className="skill-card">
-          <img src={dartLogo} alt="Dart" className="skill-logo" />
-          <p>Dart</p>
-        </div>
-        <div className="skill-card">
-          <img src={mysqlLogo} alt="MySQL" className="skill-logo" />
-          <p>MySQL</p>
-        </div>
-        <div className="skill-card">
-          <img src={postgresLogo} alt="PostgreSQL" className="skill-logo" />
-          <p>PostgreSQL</p>
-        </div>
-        <div className="skill-card">
-          <img src={nodejsLogo} alt="Node.js" className="skill-logo" />
-          <p>Node.js</p>
-        </div>
-      </div>
+const Skills = () => {
+  const [hoveredSkill, setHoveredSkill] = useState(null);
 
-      <div className="skills-group">
-        <h3 className="skills-group-title">Others</h3>
-        <div className="skill-card">
-          <img src={githubLogo} alt="GitHub" className="skill-logo" />
-          <p>GitHub</p>
+  return (
+    <section id="skills" className="my-8">
+      <h2 className="text-3xl text-center mb-4">Skills</h2>
+      <div className="skills-container">
+        <div className="skills-group">
+          <h3 className="skills-group-title">Frontend</h3>
+          {skillsData.slice(0, 5).map(skill => (
+            <div
+              key={skill.name}
+              className="skill-card"
+              onMouseEnter={() => setHoveredSkill(skill)}
+              onMouseLeave={() => setHoveredSkill(null)}
+            >
+              <img src={skill.logo} alt={skill.name} className="skill-logo" />
+              <p>{skill.name}</p>
+              {hoveredSkill && hoveredSkill.name === skill.name && (
+                <SkillPopup skill={hoveredSkill} />
+              )}
+            </div>
+          ))}
         </div>
-        <div className="skill-card">
-          <img src={dockerLogo} alt="Docker" className="skill-logo" />
-          <p>Docker</p>
+
+        <div className="skills-group">
+          <h3 className="skills-group-title">Backend</h3>
+          {skillsData.slice(5, 10).map(skill => (
+            <div
+              key={skill.name}
+              className="skill-card"
+              onMouseEnter={() => setHoveredSkill(skill)}
+              onMouseLeave={() => setHoveredSkill(null)}
+            >
+              <img src={skill.logo} alt={skill.name} className="skill-logo" />
+              <p>{skill.name}</p>
+              {hoveredSkill && hoveredSkill.name === skill.name && (
+                <SkillPopup skill={hoveredSkill} />
+              )}
+            </div>
+          ))}
         </div>
-        <div className="skill-card">
-          <img src={vscodeLogo} alt="VSCode" className="skill-logo" />
-          <p>VSCode</p>
-        </div>
-        <div className="skill-card">
-          <img src={postmanLogo} alt="Postman" className="skill-logo" />
-          <p>Postman</p>
+
+        <div className="skills-group">
+          <h3 className="skills-group-title">Others</h3>
+          {skillsData.slice(10).map(skill => (
+            <div
+              key={skill.name}
+              className="skill-card"
+              onMouseEnter={() => setHoveredSkill(skill)}
+              onMouseLeave={() => setHoveredSkill(null)}
+            >
+              <img src={skill.logo} alt={skill.name} className="skill-logo" />
+              <p>{skill.name}</p>
+              {hoveredSkill && hoveredSkill.name === skill.name && (
+                <SkillPopup skill={hoveredSkill} />
+              )}
+            </div>
+          ))}
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Skills;
