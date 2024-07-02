@@ -1,0 +1,29 @@
+.image-modal {
+    background-color: #2c2c6c;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    width: 90%;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .full-image {
+    width: 100%;
+    height: auto;
+  }
+  
