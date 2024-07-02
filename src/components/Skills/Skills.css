@@ -1,8 +1,8 @@
 .skills-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* Ensure groups are evenly spaced */
   flex-wrap: wrap;
-  gap: 10px; /* Reduced gap to make the groups closer */
+  gap: 20px; /* Add some gap between the groups */
 }
 
 .skills-group {
@@ -12,7 +12,6 @@
   width: 30%;
   min-width: 200px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative; /* Ensure skill-popup is positioned relative to its container */
 }
 
 .skills-group-title {

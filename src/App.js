@@ -20,10 +20,13 @@ const App = () => {
 
   useEffect(() => {
     const rippleContainer = document.getElementById('ripple-container');
-    rippleContainer.style.position = 'relative';
-    rippleContainer.style.overflow = 'hidden';
+    rippleContainer.style.position = 'fixed';
+    rippleContainer.style.top = '0';
+    rippleContainer.style.left = '0';
     rippleContainer.style.width = '100%';
     rippleContainer.style.height = '100%';
+    rippleContainer.style.zIndex = '-1';
+    rippleContainer.style.pointerEvents = 'none';
   }, []);
 
   const openModal = () => setModalIsOpen(true);
@@ -42,7 +45,7 @@ const App = () => {
 
     const rippleContainer = document.getElementById('ripple-container');
     const circle = document.createElement('div');
-    const diameter = Math.min(rippleContainer.clientWidth, rippleContainer.clientHeight, 200);
+    const diameter = Math.max(rippleContainer.clientWidth, rippleContainer.clientHeight);
     const radius = diameter / 2;
 
     circle.style.width = circle.style.height = `${diameter}px`;
@@ -63,7 +66,8 @@ const App = () => {
   };
 
   return (
-    <div className="App" id="ripple-container" onClick={createRipple}>
+    <div className="App" onClick={createRipple}>
+      <div id="ripple-container"></div>
       <header className="bg-gray-800 p-4 flex justify-between items-center">
         <nav className="container mx-auto flex justify-center space-x-4">
           <a href="#about" className="text-white hover:text-gray-400">About Me</a>
