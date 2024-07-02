@@ -3,7 +3,7 @@ import yourPhoto from '../../images/your-photo.jpg';
 import girlfriendPhoto from '../../images/girlfriend-photo.jpg';
 import motorcyclePhoto from '../../images/motorcycle-photo.jpg';
 import catPhoto from '../../images/cat-photo.jpg';
-import '../Photos/Photos.css';
+import './Photos.css';
 
 const Photos = () => (
   <section id="photos" className="my-8">
