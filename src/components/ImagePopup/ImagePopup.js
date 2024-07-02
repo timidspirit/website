@@ -12,7 +12,9 @@ const ImagePopup = ({ isOpen, onRequestClose, image }) => (
     className="image-modal"
     overlayClassName="overlay"
   >
-    <img src={image} alt="Full Resolution" className="full-image" />
+    <div className="image-container">
+      <img src={image} alt="Full Resolution" className="full-image" />
+    </div>
   </Modal>
 );
 

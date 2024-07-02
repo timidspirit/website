@@ -23,7 +23,7 @@ const App = () => {
     rippleContainer.style.position = 'relative';
     rippleContainer.style.overflow = 'hidden';
     rippleContainer.style.width = '100%';
-    rippleContainer.style.height = '100vh';
+    rippleContainer.style.height = '100%';
   }, []);
 
   const openModal = () => setModalIsOpen(true);
