@@ -1,18 +1,18 @@
 import React from 'react';
-import htmlLogo from '../images/html-logo.png';
-import flutterLogo from '../images/flutter-logo.png';
-import cssLogo from '../images/css-logo.png';
-import tailwindLogo from '../images/tailwind-logo.png';
-import pythonLogo from '../images/python-logo.png';
-import dartLogo from '../images/dart-logo.png';
-import mysqlLogo from '../images/mysql-logo.png';
-import postgresLogo from '../images/postgres-logo.png';
-import githubLogo from '../images/github-logo.png';
-import dockerLogo from '../images/docker-logo.png';
-import vscodeLogo from '../images/vscode-logo.png';
-import postmanLogo from '../images/postman-logo.png';
-import nodejsLogo from '../images/nodejs-logo.png';
-import reactjsLogo from '../images/reactjs-logo.png';
+import htmlLogo from '../../images/html-logo.png';
+import flutterLogo from '../../images/flutter-logo.png';
+import cssLogo from '../../images/css-logo.png';
+import tailwindLogo from '../../images/tailwind-logo.png';
+import pythonLogo from '../../images/python-logo.png';
+import dartLogo from '../../images/dart-logo.png';
+import mysqlLogo from '../../images/mysql-logo.png';
+import postgresLogo from '../../images/postgres-logo.png';
+import githubLogo from '../../images/github-logo.png';
+import dockerLogo from '../../images/docker-logo.png';
+import vscodeLogo from '../../images/vscode-logo.png';
+import postmanLogo from '../../images/postman-logo.png';
+import nodejsLogo from '../../images/nodejs-logo.png';
+import reactjsLogo from '../../images/reactjs-logo.png';
 import './Skills.css';
 
 const Skills = () => (
